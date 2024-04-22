@@ -69,6 +69,7 @@
     margin-right: 10px;
     
   }
+  
 
   .checkbox{
     display: flex;
@@ -102,7 +103,25 @@
     margin-top: 3px;
     margin-left: 5px;
   }
-.bottom-
+.bottom-container{
+    border: 2px solid rgba(0, 0, 0, 0); /* Add border */
+    padding: 20px; /* Add padding for better spacing */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    border-radius: 0.7em;
+    width: 60%;
+    margin-right: 25%;
+    margin-top: 25px;
+}
+
+.bottom-container h1{
+    font-size: 2rem;
+    letter-spacing:0.2rem ;
+    margin-left: 15px;
+    margin-bottom: 40px;
+}
 
 
 
@@ -162,4 +181,77 @@
   .quantity img#incr {
   margin-right: 0.5rem; /* Adjusted margin to move the minus button to the left */
   }
+  
+  hr{
+    width: 100%;
+    margin-left: -0px;
+    background-color: #0000004a;
+    height: 1px;
+  }
+
+  .bttn{
+    display: flex;
+    flex-direction: row;
+    margin-left: 90%;
+    background-color: white;
+    width: 5rem;
+   
+  }
+
+  .sub-total{
+    border: 1px solid rgba(0, 0, 0, 0);
+    width: 16rem;
+    height: 22rem;
+    margin-left: 70%;
+    margin-top: -248rem;
+    border-radius: 0.5rem;
+    background-color: white;
+
+  }
+ 
+  .sub-total h1{
+   font-size: 1rem;
+   margin-left: 1rem;
+   margin-top: 1rem;
+
+  }
+
+  .iitem{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: -5px;
+    margin-right:10px ;
+    margin-left: 12px;
+    justify-content: space-between;
+
+    
+  }
+
+  .iitem p{
+    color: grey;
+  }
+
+  .btn3{
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-left: 2rem;
+    height: 2.2rem;
+    width: 12rem;
+    border: none;
+    border-radius: 0.5rem;
+  }
+
+  #red {
+    color: red; /* Change the color to red */
+  }
+.back-btn{
+    margin-left: 79%;
+    margin-top: 30px;
+}
+.btn4{
+    width:8rem ;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+}
   
