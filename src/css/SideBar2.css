@@ -75,13 +75,19 @@
   width: 119px;
   background: #1a1f16;
   border-radius: 20px;
+  text-decoration: none; 
+  color: white;
+}
+
+.button img {
+  margin-right: 8px;
 }
 
 .button span {
   color: white;
-  margin-top: 8px;
+  margin-left: 8px;
+  margin-top: -5px;
 }
-
 
 .icon {
   width: 24px;

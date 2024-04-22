@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../css/SideBar2.css";
 import cart from "../Assets/addcart.svg";
+import { Link } from "react-router-dom";
 
 const SideBar2 = ({ selectedItem }) => {
   // Load bagItems and counter from localStorage on component mount
@@ -83,10 +84,12 @@ const SideBar2 = ({ selectedItem }) => {
           </div>
         ))}
       </div>
-      <div className="button">
-        <img src={cart} alt="Logo" />
-        <span>View Bag</span>
-      </div>
+      <Link to="/bag" className="button">
+        <div>
+          <img src={cart} alt="Logo" />
+          <span>View Bag</span>
+        </div>
+      </Link>
     </div>
   );
 };
