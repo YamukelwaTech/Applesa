@@ -4,13 +4,30 @@ import "../css/ShoppingCart.css";
 import products from "./ProductInfo";
 // import bagadd from "../Assets/Bag add.svg";
 import SideBar from "./SideBar";
+import plus from "../Assets/Increase-Button.svg"
+import minus from "../Assets/Decrease-Button.svg"
+import { useState } from "react";
+ 
 
 
 function Bag() {
+  const [quantity, setQuantity] = useState(1);
+
+  // Function to handle incrementing the quantity
+  const incrementQuantity = () => {
+    setQuantity(prevQuantity => prevQuantity + 1);
+  };
+
+  // Function to handle decrementing the quantity
+  const decrementQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(prevQuantity => prevQuantity - 1);
+    }
+  };
   return (
     <>
       <SideBar />
-      <div className="shopping">
+  <div className="shopping">
     <h1>Check your Bag Items</h1>
     <div className="cart-items">
         {products.map((product) => (
@@ -25,6 +42,11 @@ function Bag() {
                     <p id="disc">{product.shortDescription}</p>
                     <img src={product.rating} alt={product.title} />
                     <p>{product.currency}{product.price}</p>
+                    <div className="quantity">
+                      <img id="incr" src={plus} alt="plus" onClick={incrementQuantity} />
+                      <p>{quantity}</p>
+                      <img id="decr" src={minus} alt="minus" onClick={decrementQuantity} />
+                    </div>
                     {/* Add more product information here if needed */}
                 </div>
             </div>
