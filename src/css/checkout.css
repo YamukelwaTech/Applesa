@@ -102,3 +102,64 @@
     margin-top: 3px;
     margin-left: 5px;
   }
+.bottom-
+
+
+
+/* bottom container */
+  .items-cards {
+    border: 1px solid rgba(0, 0, 0, 0);
+    margin-bottom: 4rem;
+    background-color: white;
+    width: 100%;
+    border-radius: 1rem;
+  }
+  
+  .products-containers {
+    display: flex;
+  }
+  
+  .products-images {
+    flex: 0 0 auto;
+    margin-right: 10px;
+    margin-left: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .products-infos {
+    flex: 1 1 auto;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  } 
+  
+  .products-infos #title{
+  color: grey;
+  }
+  
+  .products-infos #disc {
+  font-size: 1rem; /* Change the font size to your desired value */
+  margin-top: 20px;
+  word-spacing: -1px;
+  font-weight: bold;
+  }
+  
+  .products-infos img{
+  margin-left: -1rem;
+  }
+  
+  .quantity {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30rem;
+  margin-top: -3.4rem;
+  
+  }
+  
+  .quantity img#decr {
+  margin-left: 0.5rem; /* Adjusted margin to move the minus button to the left */
+  }
+  
+  .quantity img#incr {
+  margin-right: 0.5rem; /* Adjusted margin to move the minus button to the left */
+  }
+  
