@@ -3,8 +3,17 @@ import "../css/SideBar2.css";
 import cart from "../Assets/addcart.svg";
 
 const SideBar2 = ({ selectedItem }) => {
-  const [bagItems, setBagItems] = useState([]);
-  const [counter, setCounter] = useState(0);
+  // Load bagItems and counter from localStorage on component mount
+  const [bagItems, setBagItems] = useState(() => {
+    const storedItems = localStorage.getItem("bagItems");
+    return storedItems ? JSON.parse(storedItems) : [];
+  });
+
+  const [counter, setCounter] = useState(() => {
+    const storedCounter = localStorage.getItem("counter");
+    return storedCounter ? parseInt(storedCounter) : 0;
+  });
+
   const [isEffectActive, setIsEffectActive] = useState(true);
 
   // Original effect to add items to bagItems
@@ -17,15 +26,17 @@ const SideBar2 = ({ selectedItem }) => {
         };
         return [...prevBagItems, newBagItem];
       });
-    }
-  }, [selectedItem, isEffectActive]);
 
-  // Effect to increment counter
-  useEffect(() => {
-    if (selectedItem && isEffectActive) {
+      // Increment counter
       setCounter((prevCounter) => prevCounter + 1);
     }
   }, [selectedItem, isEffectActive]);
+
+  // Effect to save bagItems and counter to localStorage
+  useEffect(() => {
+    localStorage.setItem("bagItems", JSON.stringify(bagItems));
+    localStorage.setItem("counter", counter.toString());
+  }, [bagItems, counter]);
 
   // Effect to disable original effect after 9 runs
   useEffect(() => {
@@ -39,6 +50,20 @@ const SideBar2 = ({ selectedItem }) => {
   for (let i = 0; i < bagItems.length; i += 3) {
     rows.push(bagItems.slice(i, i + 3));
   }
+
+  // Function to clear localStorage on page refresh
+  const clearLocalStorageOnRefresh = () => {
+    localStorage.clear();
+  };
+
+  // Attach event listener to clear localStorage on page refresh
+  useEffect(() => {
+    window.addEventListener("beforeunload", clearLocalStorageOnRefresh);
+
+    return () => {
+      window.removeEventListener("beforeunload", clearLocalStorageOnRefresh);
+    };
+  }, []);
 
   return (
     <div className="bag-area">

@@ -1,10 +1,11 @@
 import React from "react";
 import SideBar from "./SideBar";
 import SideBar2 from "./Sidebar2";
+import { Link } from "react-router-dom";
 import "../css/ItemView.css";
 import bag from "../Assets/Name=bag-add.svg";
 import stars from "../Assets/Special.png";
-import { useLocation } from "react-router-dom"; // Import useLocation from react-router-dom
+import { useLocation } from "react-router-dom";
 
 function ItemView() {
   // Access location state to get the item data passed from Dashboard component
@@ -14,10 +15,9 @@ function ItemView() {
   return (
     <>
       <SideBar />
-      <a href="/" className="back-link">
+      <Link to="/" className="back-link">
         &lt;&nbsp;&nbsp;Back
-      </a>{" "}
-      {/* Back link */}
+      </Link>
       <div className="product-list">
         {/* Render item details */}
         <div className="product" key={item.id}>

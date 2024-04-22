@@ -2,12 +2,11 @@ import React from "react";
 import SideBar2 from "./Sidebar2";
 import "../css/ShoppingCart.css";
 import products from "./ProductInfo";
-// import bagadd from "../Assets/Bag add.svg";
 import SideBar from "./SideBar";
 import plus from "../Assets/Increase-Button.svg"
 import minus from "../Assets/Decrease-Button.svg"
 import { useState } from "react";
- 
+
 
 
 function Bag() {
@@ -61,5 +60,3 @@ function Bag() {
 }
 
 export default Bag;
-
-
