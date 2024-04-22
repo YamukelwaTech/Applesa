@@ -1,0 +1,108 @@
+.ccontainers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center */
+    align-items: center; /* Horizontally center */
+    /* height: 100%;  */
+    margin-top: 5%;
+    font-family: sans-serif;
+
+    
+  }
+  
+  .top-ccontainer {
+    border: 2px solid rgba(0, 0, 0, 0); /* Add border */
+    padding: 20px; /* Add padding for better spacing */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    border-radius: 0.7em;
+    width: 50%;
+  }
+  
+  .top-ccontainer p {
+    margin: 10px 0; /* Add some margin between paragraphs */
+    color: gray;
+    display: flex; /* Enable flex display for aligning items */
+    align-items: center; /* Align items vertically */
+  }
+
+  .top-ccontainer h1 {
+    font-size: 2rem;
+    letter-spacing:0.2rem ;
+    margin-left: 15px;
+  }
+  
+  .top-ccontainer img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .bottom-container {
+    /* Styles for the bottom container */
+    border: 2px solid rgba(0, 0, 0, 0); /* Add border */
+    padding: 20px; /* Add padding for better spacing */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    border-radius: 0.7em;
+    width: 50%;
+    margin-top: 30px;
+  }
+
+  .bottom-container h1 {
+    font-size: 2rem;
+    letter-spacing:0.2rem ;
+    word-spacing: 0.1rem;
+    margin-left: 15px;
+    font-family: sans-serif;
+
+}
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+  
+  .Date {
+    flex-wrap: wrap;
+    margin-right: 40px;
+    
+  }
+  
+  #Date{
+    border: 1px solid #d9d9d9;
+    border-radius: 0.5em;
+    box-sizing: border-box;
+    padding: 10px;
+    height: 2.5rem;
+  }
+  
+  /* label {
+    display: block;
+  } */
+  
+ 
+  .card input {
+    border: 1px solid #d9d9d9;
+    border-radius: 0.5em;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42rem;
+    height: 2.5rem;
+  }
+ 
+  label {
+    color: #3d3d3d;
+    display: block;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+ 
+ 

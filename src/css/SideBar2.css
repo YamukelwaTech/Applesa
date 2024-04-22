@@ -1,0 +1,89 @@
+.bag-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 72px, 8px, 8px, 8px;
+  gap: 10px;
+  position: fixed;
+  width: 345px;
+  height: 99%;
+  right: 0;
+  top: 0px;
+  /* background-color: pink; */
+}
+
+.title h3 {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding: 8px;
+  gap: 10px;
+  font-size: 29.06px;
+  color: #1a1f16;
+}
+
+.bag-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 8px;
+  gap: 16px;
+  /* background-color: red; */
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  width: 274px;
+  height: 80px;
+  margin-bottom: 16px;
+  /* background-color: yellow; */
+}
+
+.bag-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+  gap: 16px;
+  /* width: 80px; */
+  height: 80px;
+  background:  white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.bag-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.button {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  gap: 8px;
+  height: 30px;
+  width: 119px;
+  background: #1a1f16;
+  border-radius: 20px;
+}
+
+.button span {
+  color: white;
+  margin-top: 8px;
+}
+
+
+.icon {
+  width: 24px;
+  height: 24px;
+}

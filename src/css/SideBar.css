@@ -1,0 +1,92 @@
+/* Navbar */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  gap: 10px;
+  position: fixed;
+  width: 70px;
+  left: 16px;
+  top: 16px;
+  bottom: 1.56%;
+  border-radius: 8px;
+  transition: width 0.3s ease;
+  background-color: #ffffff;
+}
+
+.navbar.open {
+  width: 110px;
+}
+
+.nav-links-top.open {
+  width: 90px;
+}
+
+.nav-links-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 32px;
+  /* margin: 0 auto; */
+  transition: width 0.3s ease;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  top: 13px;
+  left: 10px;
+  border-radius: 4px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+  gap: 10px;
+}
+
+.Bag {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  gap: 10px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.home {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+  width: 24px;
+  height: 24px;
+  background: black;
+  border-radius: 10px;
+}
+
+/* Nav-Link-Bottom */
+.nav-link-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 8px;
+  gap: 10px;
+  margin: 0 auto;
+  width: 56px;
+  height: 56px;
+}
