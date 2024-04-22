@@ -1,0 +1,104 @@
+.containers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center */
+    align-items: center; /* Horizontally center */
+    /* height: 100%;  */
+    margin-top: 5%;
+    font-family: sans-serif;
+
+    
+  }
+  
+  .top-container {
+    border: 2px solid rgba(0, 0, 0, 0); /* Add border */
+    padding: 20px; /* Add padding for better spacing */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    border-radius: 0.7em;
+    width: 60%;
+    margin-right: 25%;
+  }
+  
+  .top-container p {
+    margin: 10px 0; /* Add some margin between paragraphs */
+    color: gray;
+    display: flex; /* Enable flex display for aligning items */
+    align-items: center; /* Align items vertically */
+    margin-left: 15px;
+  }
+
+  .top-container h1 {
+    font-size: 2rem;
+    letter-spacing:0.2rem ;
+    margin-left: 15px;
+  }
+
+  .middle-container {
+    border: 2px solid rgba(0, 0, 0, 0); /* Add border */
+    padding: 20px; /* Add padding for better spacing */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    border-radius: 0.7em;
+    width: 60%;
+    margin-right: 25%;
+    margin-top: 25px;
+  }
+
+  .middle-container p {
+    margin: 10px 0; /* Add some margin between paragraphs */
+    color: gray;
+    display: flex; /* Enable flex display for aligning items */
+    align-items: center; /* Align items vertically */
+    margin-left: 15px;
+  }
+
+  .middle-container h1 {
+    font-size: 2rem;
+    letter-spacing:0.2rem ;
+    margin-left: 15px;
+  }
+
+  .middle-container img {
+    /* width: 40px; */
+    /* height: auto; */
+    margin-right: 10px;
+    
+  }
+
+  .checkbox{
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+
+  .checkbox input[type="checkbox"] {
+    /* Hide the default checkbox */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid black;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  /* Style the custom checkbox when checked */
+  .checkbox input[type="checkbox"]:checked {
+    background-color: rgb(5, 59, 9);
+  }
+  
+  /* Style the label */
+  .checkbox label {
+    font-weight: bold;
+    color: black;
+    margin-top: 3px;
+    margin-left: 5px;
+  }
