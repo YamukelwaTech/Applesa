@@ -14,6 +14,10 @@ function ItemView() {
   return (
     <>
       <SideBar />
+      <a href="/" className="back-link">
+        &lt;&nbsp;&nbsp;Back
+      </a>{" "}
+      {/* Back link */}
       <div className="product-list">
         {/* Render item details */}
         <div className="product" key={item.id}>
