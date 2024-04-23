@@ -15,6 +15,7 @@
   margin-right: 25rem;
   /* background-color: red; */
   position: relative;
+  font-family: sans-serif;
 }
 
 .product {
@@ -85,7 +86,7 @@
 .paragraph {
   margin-left: 11rem;
   margin-right: 25rem;
-  background-color: ;
+  font-family: sans-serif;
 }
 
 .paragraph h1 {
@@ -96,4 +97,11 @@
 .paragraph p{
   font-size: 28px;
   
+}
+
+#HR{
+  width: 65%;
+  margin-left: 10%;
+  height: 3px;
+  background-color: #00000098;
 }
