@@ -2,14 +2,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 72px, 8px, 8px, 8px;
+  padding: 72px 8px 8px 8px;
   gap: 10px;
   position: fixed;
   width: 345px;
   height: 99%;
   right: 0;
-  top: 0px;
+  top: 0;
   /* background-color: pink; */
+}
+
+.bag-area::after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  height: 84%;
+  width: 5px;
+  background-color: #1A1F1680;
+  left: -1px;
+  border-radius: 10px; 
 }
 
 .title h3 {
@@ -75,7 +86,7 @@
   width: 119px;
   background: #1a1f16;
   border-radius: 20px;
-  text-decoration: none; 
+  text-decoration: none;
   color: white;
 }
 
@@ -92,4 +103,8 @@
 .icon {
   width: 24px;
   height: 24px;
+}
+
+.total-price{
+font-weight: bold;
 }
