@@ -1,12 +1,11 @@
-import lock from "../Assets/lock.svg"
-
-
+import lock from "../Assets/lock.svg";
+import { Link } from "react-router-dom";
 
 function AddAdress() {
-    return (
-      <>
+  return (
+    <>
       <div className="ccontainers">
-       <div className="bottom-ccontainer">
+        <div className="bottom-ccontainer">
           <form>
             <div className="form-group">
               <div className="card">
@@ -17,7 +16,11 @@ function AddAdress() {
             <div className="form-group">
               <div className="card">
                 <label htmlFor="name">Street name</label>
-                <input type="text" id="name" placeholder="123 Plae Grond Street" />
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="123 Plae Grond Street"
+                />
               </div>
             </div>
 
@@ -40,28 +43,33 @@ function AddAdress() {
                 <label htmlFor="name">Country</label>
                 <input type="text" id="name" placeholder="United States" />
               </div>
-            </div><br></br>
+            </div>
+            <br></br>
 
             <div className="checkbox">
-        <input type="checkbox" id="myCheckbox" name="myCheckbox" />
-        <label htmlFor="myCheckbox">Save this as your default payment method</label>
-        </div>
+              <input type="checkbox" id="myCheckbox" name="myCheckbox" />
+              <label htmlFor="myCheckbox">
+                Save this as your default payment method
+              </label>
+            </div>
 
-        <div className="btn5">
-        <button className="bttn5">Add Payment Method</button>
-        </div>
+            <div className="btn5">
+              <Link to="/AddPayment">
+                <button className="bttn5">Add Payment Method</button>
+              </Link>
+            </div>
 
-        <div className="la-line">
-          <p>back</p>
-          <p id="la"><img src={lock} alt=""></img>Secure Connection</p>
-        </div>
-        
+            <div className="la-line">
+              <p>back</p>
+              <p id="la">
+                <img src={lock} alt=""></img>Secure Connection
+              </p>
+            </div>
           </form>
-        
         </div>
       </div>
-      </>
-    );
-  }
-  
-  export default AddAdress ;
+    </>
+  );
+}
+
+export default AddAdress;

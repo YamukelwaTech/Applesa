@@ -114,7 +114,7 @@ function CheckOut() {
             <p id="red">$$$</p>
           </div>
           <hr></hr>
-          <Link to="/AddPayment " className="">
+          <Link to="/AddAdress " className="">
             <button className="btn3">Place your order</button>
           </Link>
         </div>

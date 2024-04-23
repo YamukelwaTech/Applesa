@@ -14,7 +14,7 @@ function AddPayment() {
           <p><img src={cards} alt=""></img>MasterCard ending in 4242</p>
           <p><img src={cards} alt=""></img>VISA Debit ending in 2894</p>
         </div>
-        
+
         <div className="bottom-ccontainer">
           <form>
            <h1>ADD A NEW CARD</h1>
@@ -58,7 +58,7 @@ function AddPayment() {
         </div>
 
           </form>
-        
+
         </div>
 
 
@@ -66,5 +66,5 @@ function AddPayment() {
       </>
     );
   }
-  
+
   export default AddPayment ;
