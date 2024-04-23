@@ -14,7 +14,7 @@ function AddPayment() {
           <p><img src={cards} alt=""></img>VISA Debit ending in 2894</p>
         </div>
         
-        <div className="bottom-container">
+        <div className="bottom-ccontainer">
           <form>
            <h1>ADD A NEW CARD</h1>
             <div className="form-group">
