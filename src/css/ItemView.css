@@ -1,13 +1,14 @@
 .back-link {
+  font-size: large;
   display: block;
   text-decoration: none;
-  /* background-color: aqua; */
   color: #1a1f16;
   font-weight: bold;
   position: absolute;
   left: 11rem;
   top: 50px;
 }
+
 
 .product-list {
   margin-left: 10rem;
