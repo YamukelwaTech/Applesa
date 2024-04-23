@@ -1,13 +1,14 @@
 .back-link {
+  font-size: large;
   display: block;
   text-decoration: none;
-  /* background-color: aqua; */
   color: #1a1f16;
   font-weight: bold;
   position: absolute;
   left: 11rem;
   top: 50px;
 }
+
 
 .product-list {
   margin-left: 10rem;
@@ -66,33 +67,33 @@
   justify-content: center;
   align-items: center;
   padding: 8px 24px;
-  gap: 80px;
-  width: 140px;
+  gap: 8px;
   height: 30px;
+  width: 119px;
   background: #1a1f16;
-  border-radius: 17px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
 }
 .button2 span {
   color: white;
-  margin-top: 8px;
+  margin-left: 8px;
+  margin-top: -5px;
 }
 
-hr {
-  border: none; /* Remove the default border */
-  border-radius: 5em;
-  height: 3px; /* Set the height of the horizontal rule */
-  width: 63%;
-  background-color: rgba(0, 0, 0, 0.598); /* Set the background color */
-  margin-right: 0%; /* Add margin for spacing */
-  margin-left: 11%;
-}
 
 .paragraph {
   margin-left: 11rem;
   margin-right: 25rem;
+  background-color: ;
 }
 
 .paragraph h1 {
   margin-top: 32px;
   margin-bottom: 10px;
+}
+
+.paragraph p{
+  font-size: 28px;
+  
 }

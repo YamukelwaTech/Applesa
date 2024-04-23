@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link
 import "../css/SideBar.css";
 import logo from "../Assets/Logo.svg";
 import menu from "../Assets/Menu.svg";
@@ -29,14 +30,20 @@ const SideBar = () => {
           </div>
         </div>
         <div className="home">
-          <img src={isMenuOpen ? closeHome : home} alt="Home Icon" />{" "}
+          <Link to="/">
+            <img src={isMenuOpen ? closeHome : home} alt="Home Icon" />{" "}
+          </Link>
         </div>
         <div className="Bag">
-          <img src={isMenuOpen ? closeBag : bag} alt="Bag Icon" />{" "}
+          <Link to="/bag">
+            <img src={isMenuOpen ? closeBag : bag} alt="Bag Icon" />{" "}
+          </Link>
         </div>
       </div>
       <div className="nav-link-bottom">
-        <img src={isMenuOpen ? closeNavLink : navlink} alt="Nav link Icon" />{" "}
+        <Link to="/">
+          <img src={isMenuOpen ? closeNavLink : navlink} alt="Nav link Icon" />{" "}
+        </Link>
       </div>
     </div>
   );
