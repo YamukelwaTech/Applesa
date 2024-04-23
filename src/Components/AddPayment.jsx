@@ -1,6 +1,7 @@
 // import card from "../Assets/card-img.jpg"
 import cards from "../Assets/card-svg.svg"
 import "../css/AddPayment.css"
+import lock from "../Assets/lock.svg"
 
 
 
@@ -42,10 +43,20 @@ function AddPayment() {
              <input type="numeric" id="Date" placeholder="123" />
             </div>
         </div>
-
+        <div className="checkbox">
         <input type="checkbox" id="myCheckbox" name="myCheckbox" />
-<label htmlFor="myCheckbox">Check me</label>
-            
+        <label htmlFor="myCheckbox">Save this as your default payment method</label>
+        </div>
+
+        <div className="btn5">
+        <button className="bttn5">Add Payment Method</button>
+        </div>
+
+        <div className="la-line">
+          <p id="ba">back</p>
+          <p id="la"><img src={lock} alt=""></img>Secure Connection</p>
+        </div>
+
           </form>
         
         </div>
