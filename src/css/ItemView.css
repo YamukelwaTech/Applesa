@@ -1,7 +1,19 @@
+.back-link {
+  display: block;
+  text-decoration: none;
+  /* background-color: aqua; */
+  color: #1a1f16;
+  font-weight: bold;
+  position: absolute;
+  left: 11rem;
+  top: 50px;
+}
+
 .product-list {
   margin-left: 10rem;
   margin-right: 25rem;
   /* background-color: red; */
+  position: relative;
 }
 
 .product {
@@ -21,20 +33,24 @@
 }
 
 .bigImage {
-  margin-left: 1rem; /* Add some space between bigImg and smallImg */
-  border-radius: 0.5rem;
+  margin-left: 1rem;
+  border-radius: 11px;
+  object-fit: cover;
 }
 
 .smallImg {
   display: flex;
   flex-direction: column;
+  gap: 5px;
+  /* background-color: red; */
 }
 
 .smallImage {
   width: 3rem; /* Adjust the width as needed */
-  height: 4rem; /* Maintain aspect ratio */
+  height: 58px; /* Maintain aspect ratio */
   margin-bottom: 10px; /* Add some space between images */
-  border-radius: 0.5rem;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .product-details h1 {
