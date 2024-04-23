@@ -41,7 +41,7 @@ function Bag() {
         <h1>Check your Bag Items</h1>
         <div className="cart-items">
           {bagItems.map((product) => (
-            <div className="items-cards" key={product.id}>
+            <div className="items-cards1" key={product.id}>
               <div className="products-containers">
                 <div className="products-images">
                   <img src={product.imageUrl} alt={product.title} />

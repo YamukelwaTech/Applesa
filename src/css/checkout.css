@@ -5,7 +5,7 @@
   align-items: center;
   margin-top: 5%;
   font-family: sans-serif;
-  background-color: red;
+  /* background-color: red; */
 }
 
 
@@ -19,7 +19,7 @@
   border-radius: 0.7em;
   width: 60%;
   margin-right: 25%;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 
 .top-container p {
@@ -47,7 +47,7 @@
   width: 60%;
   margin-right: 25%;
   margin-top: 25px;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 
 .middle-container p {
@@ -113,7 +113,7 @@
   width: 60%;
   margin-right: 25%;
   margin-top: 25px;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 
 .bottom-container h1 {

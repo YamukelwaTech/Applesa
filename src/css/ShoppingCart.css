@@ -1,5 +1,4 @@
 .shopping {
-    
   margin-left: 10rem;
   margin-right: 21rem;
   margin-top: 2%;
@@ -13,11 +12,11 @@
   margin-bottom: 4rem;
 }
 
-.items-cards {
+.items-cards1 {
   border: 1px solid rgba(0, 0, 0, 0);
   margin-bottom: 4rem;
   background-color: white;
-  width: 100%;
+  width: 95% !important;
   border-radius: 1rem;
 }
 
@@ -36,7 +35,7 @@
   flex: 1 1 auto;
   margin-left: 1rem;
   margin-top: 1rem;
-} 
+}
 
 .products-infos #title{
 color: grey;
@@ -68,4 +67,3 @@ margin-left: 0.5rem; /* Adjusted margin to move the minus button to the left */
 .quantity img#incr {
 margin-right: 0.5rem; /* Adjusted margin to move the minus button to the left */
 }
-
