@@ -31,7 +31,7 @@ function CheckOut() {
           <p>Vermont, California</p>
           <p>United States of America</p>
           <div className="bttn">
-            <button>Change</button>
+            {/* <button>Change</button> */}
           </div>
         </div>
 
@@ -50,7 +50,7 @@ function CheckOut() {
             </label>
           </div>
           <div className="bttn">
-            <button>Change</button>
+            {/* <button>Change</button> */}
           </div>
         </div>
         <div className="bottom-container">

@@ -81,22 +81,19 @@
   margin-top: -5px;
 }
 
-hr {
-  border: none; /* Remove the default border */
-  border-radius: 5em;
-  height: 3px; /* Set the height of the horizontal rule */
-  width: 14%;
-  background-color: rgba(0, 0, 0, 0.598); /* Set the background color */
-  margin-right: 0%; /* Add margin for spacing */
-  margin-left: 11%;
-}
 
 .paragraph {
   margin-left: 11rem;
   margin-right: 25rem;
+  background-color: ;
 }
 
 .paragraph h1 {
   margin-top: 32px;
   margin-bottom: 10px;
+}
+
+.paragraph p{
+  font-size: 28px;
+  
 }

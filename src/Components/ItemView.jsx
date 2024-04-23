@@ -56,7 +56,6 @@ function ItemView() {
       </div>
       <br />
       <br />
-      <hr />
       <div className="paragraph">
         <h1>Description</h1>
         <p>{item.detailedDescription[1]}</p>
