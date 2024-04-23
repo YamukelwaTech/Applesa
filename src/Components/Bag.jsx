@@ -6,7 +6,7 @@ import plus from "../Assets/Increase-Button.svg";
 import minus from "../Assets/Decrease-Button.svg";
 
 function Bag() {
-  // Retrieve bag items and quantity from local storage
+  // eslint-disable-next-line
   const [bagItems, setBagItems] = useState(() => {
     const storedItems = localStorage.getItem("bagItems");
     return storedItems ? JSON.parse(storedItems) : [];
