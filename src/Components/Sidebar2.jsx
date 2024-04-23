@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../css/SideBar2.css";
 import cart from "../Assets/addcart.svg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const SideBar2 = ({ selectedItem }) => {
   // Load bagItems and counter from localStorage on component mount
@@ -10,6 +10,8 @@ const SideBar2 = ({ selectedItem }) => {
     return storedItems ? JSON.parse(storedItems) : [];
   });
 
+  const [totalPrice, setTotalPrice] = useState(0);
+
   const [counter, setCounter] = useState(() => {
     const storedCounter = localStorage.getItem("counter");
     return storedCounter ? parseInt(storedCounter) : 0;
@@ -17,13 +19,31 @@ const SideBar2 = ({ selectedItem }) => {
 
   const [isEffectActive, setIsEffectActive] = useState(true);
 
+  const location = useLocation();
+
+  // Calculate total price of all items in bag
+  useEffect(() => {
+    let total = 0;
+    bagItems.forEach((item) => {
+      total += item.price;
+    });
+    setTotalPrice(total);
+  }, [bagItems]);
+
   // Original effect to add items to bagItems
   useEffect(() => {
     if (selectedItem && isEffectActive) {
       setBagItems((prevBagItems) => {
         const newBagItem = {
-          id: prevBagItems.length + 1,
+          id: selectedItem.id,
+          title: selectedItem.title,
+          description: selectedItem.description,
+          shortDescription: selectedItem.shortDescription,
+          rating: selectedItem.rating,
+          price: selectedItem.price,
+          currency: selectedItem.currency,
           imageUrl: selectedItem.imageUrl,
+          // Include other necessary properties from selectedItem
         };
         return [...prevBagItems, newBagItem];
       });
@@ -62,7 +82,10 @@ const SideBar2 = ({ selectedItem }) => {
     window.addEventListener("beforeunload", clearLocalStorageOnRefresh);
 
     return () => {
-      window.removeEventListener("beforeunload", clearLocalStorageOnRefresh);
+      window.removeEventListener(
+        "beforeunload",
+        clearLocalStorageOnRefresh
+      );
     };
   }, []);
 
@@ -84,12 +107,26 @@ const SideBar2 = ({ selectedItem }) => {
           </div>
         ))}
       </div>
-      <Link to="/bag" className="button">
-        <div>
-          <img src={cart} alt="Logo" />
-          <span>View Bag</span>
+      {location.pathname === "/bag" && ( // Render total only on bag page
+        <div className="total-price">
+          Bag Total: ${totalPrice.toFixed(2)}
         </div>
-      </Link>
+      )}
+      {location.pathname === "/bag" ? (
+        <Link to="/checkout" className="button">
+          <div>
+            <img src={cart} alt="Logo" />
+            <span>Checkout</span>
+          </div>
+        </Link>
+      ) : (
+        <Link to="/bag" className="button">
+          <div>
+            <img src={cart} alt="Logo" />
+            <span>View Bag</span>
+          </div>
+        </Link>
+      )}
     </div>
   );
 };

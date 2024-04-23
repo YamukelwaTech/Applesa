@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import SideBar2 from "./Sidebar2";
 import "../css/ShoppingCart.css";
-import products from "./ProductInfo";
 import SideBar from "./SideBar";
 import plus from "../Assets/Increase-Button.svg";
 import minus from "../Assets/Decrease-Button.svg";
-import { useState } from "react";
 
 function Bag() {
-  const [quantity, setQuantity] = useState(1);
+  // Retrieve bag items and quantity from local storage
+  const [bagItems, setBagItems] = useState(() => {
+    const storedItems = localStorage.getItem("bagItems");
+    return storedItems ? JSON.parse(storedItems) : [];
+  });
+
+  const [quantity, setQuantity] = useState(() => {
+    const storedQuantity = localStorage.getItem("quantity");
+    return storedQuantity ? parseInt(storedQuantity) : 1;
+  });
 
   // Function to handle incrementing the quantity
   const incrementQuantity = () => {
@@ -21,13 +28,19 @@ function Bag() {
       setQuantity((prevQuantity) => prevQuantity - 1);
     }
   };
+
+  useEffect(() => {
+    // Update local storage when quantity changes
+    localStorage.setItem("quantity", quantity.toString());
+  }, [quantity]);
+
   return (
     <>
       <SideBar />
       <div className="shopping">
         <h1>Check your Bag Items</h1>
         <div className="cart-items">
-          {products.map((product) => (
+          {bagItems.map((product) => (
             <div className="items-cards" key={product.id}>
               <div className="products-containers">
                 <div className="products-images">
@@ -47,14 +60,14 @@ function Bag() {
                       id="incr"
                       src={plus}
                       alt="plus"
-                      onClick={incrementQuantity}
+                      onClick={decrementQuantity}
                     />
                     <p>{quantity}</p>
                     <img
                       id="decr"
                       src={minus}
                       alt="minus"
-                      onClick={decrementQuantity}
+                      onClick={incrementQuantity}
                     />
                   </div>
                   {/* Add more product information here if needed */}

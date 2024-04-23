@@ -11,10 +11,8 @@ function DashBoard() {
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
 
-  const handleClick = (id, imageUrl) => {
-    const logMessage = `Clicked on item with ID: ${id}, Image URL: ${imageUrl}`;
-    console.log(logMessage);
-    setClickedItem({ id, imageUrl });
+  const handleClick = (item) => {
+    setClickedItem(item);
   };
 
   const handleImageClick = (id) => {
@@ -45,7 +43,7 @@ function DashBoard() {
         <div key={index} className="item-card">
           <div
             className="product-image"
-            onClick={() => handleImageClick(item.id)} 
+            onClick={() => handleImageClick(item.id)}
           >
             <img src={item.imageUrl} alt={item.title} className="product-img" />
           </div>
@@ -57,10 +55,7 @@ function DashBoard() {
                 {item.currency}
                 {item.price}
               </div>
-              <div
-                className="view"
-                onClick={() => handleClick(item.id, item.imageUrl)}
-              >
+              <div className="view" onClick={() => handleClick(item)}>
                 <img src={bagadd} alt="Add to Bag" className="bag-icon" />
               </div>
             </div>
