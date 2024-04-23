@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import SideBar from "./SideBar";
 import SideBar2 from "./Sidebar2";
 import { Link } from "react-router-dom";
 import "../css/ItemView.css";
-import bag from "../Assets/Name=bag-add.svg";
+import cart from "../Assets/addcart.svg";
 import stars from "../Assets/Special.png";
 import { useLocation } from "react-router-dom";
 
 function ItemView() {
-  // Access location state to get the item data passed from Dashboard component
   const location = useLocation();
   const { item } = location.state;
+  const [clickedItem, setClickedItem] = useState(null);
+
+  const handleClick = () => {
+    setClickedItem(item);
+  };
 
   return (
     <>
@@ -21,24 +25,13 @@ function ItemView() {
       <div className="product-list">
         {/* Render item details */}
         <div className="product" key={item.id}>
+          {/* Render images */}
           <div className="Container">
             <div className="smallImg">
               {/* Render small images */}
-              <img
-                className="smallImage"
-                src={item.imageUrl}
-                alt={item.title}
-              />
-              <img
-                className="smallImage"
-                src={item.imageUrl}
-                alt={item.title}
-              />
-              <img
-                className="smallImage"
-                src={item.imageUrl}
-                alt={item.title}
-              />
+              <img className="smallImage" src={item.imageUrl} alt={item.title} />
+              <img className="smallImage" src={item.imageUrl} alt={item.title} />
+              <img className="smallImage" src={item.imageUrl} alt={item.title} />
             </div>
             <div className="bigImg">
               {/* Render big image */}
@@ -57,20 +50,19 @@ function ItemView() {
           </div>
         </div>
       </div>
-      <div className="button2">
-        <button>
-          <img src={bag} alt="Logo" />
-        </button>
+      <div className="button2" onClick={handleClick}>
+        <img src={cart} alt="Logo" />
+        <span>Add Bag</span>
       </div>
-      <br></br>
-      <br></br>
-      <hr></hr>
+      <br />
+      <br />
+      <hr />
       <div className="paragraph">
         <h1>Description</h1>
         <p>{item.detailedDescription[1]}</p>
-        {/* second part of detailed  */}
+        {/* second part of detailed */}
       </div>
-      <SideBar2 />
+      <SideBar2 selectedItem={clickedItem} />
     </>
   );
 }
