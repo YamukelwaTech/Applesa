@@ -6,6 +6,7 @@ import plus from "../Assets/Increase-Button.svg";
 import minus from "../Assets/Decrease-Button.svg";
 import { useState } from "react";
 import products from "./ProductInfo";
+import { Link } from "react-router-dom";
 
 function CheckOut() {
   const [quantity, setQuantity] = useState(1);
@@ -30,9 +31,7 @@ function CheckOut() {
           <p>123 Plae Grond Street</p>
           <p>Vermont, California</p>
           <p>United States of America</p>
-          <div className="bttn">
-            {/* <button>Change</button> */}
-          </div>
+          <div className="bttn">{/* <button>Change</button> */}</div>
         </div>
 
         <div className="middle-container">
@@ -49,9 +48,7 @@ function CheckOut() {
               Billing adress same as Shipping adress
             </label>
           </div>
-          <div className="bttn">
-            {/* <button>Change</button> */}
-          </div>
+          <div className="bttn">{/* <button>Change</button> */}</div>
         </div>
         <div className="bottom-container">
           <h1>REVIEW YOUR BAG</h1>
@@ -86,7 +83,6 @@ function CheckOut() {
                         onClick={decrementQuantity}
                       />
                     </div>
-
                   </div>
                 </div>
                 <hr></hr>
@@ -118,7 +114,9 @@ function CheckOut() {
             <p id="red">$$$</p>
           </div>
           <hr></hr>
-          <button className="btn3">Place your order</button>
+          <Link to="/AddPayment " className="">
+            <button className="btn3">Place your order</button>
+          </Link>
         </div>
         <div className="back-btn">
           <button className="btn4">Back</button>
