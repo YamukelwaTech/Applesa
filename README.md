@@ -30,7 +30,7 @@
 
 ###### Features:
 
-##### Payment Page, Address Page , Checkout Page
+##### Payment Page, Address Page, Checkout Page
 
 ###### Process:
 
